@@ -1,7 +1,7 @@
 <widget xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0" id="com.jsank.spiritrox" version="1.0.0">
   <name>SpiritRox</name>
-  <description>Hello World sample application that responds to the deviceready event.</description>
-  <author href="http://phonegap.com" email="support@phonegap.com">PhoneGap Team</author>
+  <description>SpiritRox aims to mimic the functionality that you may see on any particular ghost hunter or reality-based paranormal show. That is, the functionality of what is called a "Spirit Box."</description>
+  <author href="http://www.jsank.com" email="hello@jsank.com">Josh Sankey</author>
   <content src="index.html"/>
   <preference name="permissions" value="none"/>
   <preference name="orientation" value="default"/>
