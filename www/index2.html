@@ -1021,12 +1021,20 @@
 				];
 	
 		var strength = ["high", "medium", "low"];
-
+		
+		var isFirst = 0;
+		
 		function doSomething() {
+		   // If you believe that paranormal entities can, in fact, manipulate electronic devices, then this is
+		   // the area worth paying attention to. If that assumption is correct, the entities should be able to
+		   // push whatever word and strength indication to the top of these arrays. I'm not saying it is a legit
+		   // way to percieve reality, but it is essentially how a "Spirit Box" works in real life...by having a
+		   // word selected from a dictionary based on what could otherwise be called "pseudo-random" events. The
+		   // only way to prove this wrong is to try it out! =)
 		   shuffle(words);
 		   shuffle(strength);
-		   var workingNode = words[1];
-		   var workingNode2 = strength[1];
+		   var workingNode = words[0];
+		   var workingNode2 = strength[0];
 		   var theColor;
 		   
 		   if (workingNode2 == "high") {
@@ -1045,7 +1053,13 @@
 		   var sec = date.getSeconds(); 
 		   
 		   var theDiv = document.getElementById("main");
-		   theDiv.innerHTML += "<font color=" + theColor + "><u>" + workingNode2 + "</u>:</font> \"" + workingNode + "\"<font size='2em' color='#CCCCCC'>(" + hour + ":" + min + ":" + sec + ")</font><br />";
+		   if (isFirst == 0) {
+
+			isFirst++;
+		   } else {
+			theDiv.innerHTML += isFirst + ". <font color=" + theColor + "><u>" + workingNode2 + "</u>:</font> \"" + workingNode + "\"<font size='2em' color='#CCCCCC'> (" + hour + ":" + min + ":" + sec + ")</font><br />";
+			isFirst++;
+			}
 		   }
 
 		function init() {
@@ -1061,9 +1075,10 @@
 			init();
 		});
 
-</script>
+	</script>
 		<center>
 		<h1>SpiritRox</h1>
+		<img src="loader.gif">
 		<div class="mainWrap">
 		<div id="main"></div>
 		</div>
